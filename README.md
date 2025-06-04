@@ -180,6 +180,18 @@ Solution supports HTTP Proxy settings when running in corporate environment. Sim
 
 For custom CA use environment variable `CUSTOM_CA_PATH` to load the certificate into proxy agent options.
 
+#### Optional Basic Authentication
+
+Protect access to the dashboard with a username and password.
+
+````
+NUXT_BASIC_AUTH_ENABLED=true
+NUXT_BASIC_AUTH_USERNAME=myuser
+NUXT_BASIC_AUTH_PASSWORD=mysecret
+````
+
+Set `NUXT_BASIC_AUTH_ENABLED` to `true` to require credentials on every request.
+
 ## Install Dependencies
 
 ```bash

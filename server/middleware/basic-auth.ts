@@ -2,7 +2,9 @@ import { createError, getHeader } from 'h3'
 
 export default defineEventHandler((event) => {
   const config = useRuntimeConfig(event)
-  if (!config.basicAuth?.enabled) {
+  const enabled =
+    config.basicAuth?.enabled === true || config.basicAuth?.enabled === 'true'
+  if (!enabled) {
     return
   }
 
